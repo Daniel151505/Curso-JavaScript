@@ -10,16 +10,35 @@ var articulos = [
 
 console.log(articulos);
 
-// Filter
+// Filter --> Devuelve todos los elementos del array que cumplan con la condición dada
 var articulosFiltrados =articulos.filter(function(articulo) {
-    return articulo.costo <= 500
+    return articulo.costo <= 500;
 });
 
 console.log(articulosFiltrados);
 
-// Map
+// Map --> Recorriendo Articulo
 var nombreArticulos = articulos.map(function(articulo) {
-    return articulo.nombre
+    return articulo.nombre;
 })
 
 console.log(nombreArticulos);
+
+
+// Find --> Devuelve el primer elemento del array que cumpla con la condición dada
+var encuentraArticulo = articulos.find(function(articulo) {
+    return articulo.nombre === "Laptop"
+});
+
+console.log(encuentraArticulo);
+
+// For each --> Ejecuta lo que le definamos una vez por cada elemento de nuestro array
+articulos.forEach(function (articulo) {
+    console.log(articulo.nombre);
+})
+
+// Some -->  Comprueba si al menos un elemento del array cumple con la condición que le damos
+var articulosBaratos = articulos.some(function (articulo) {
+    return articulo.costo <= 700;
+})
+
